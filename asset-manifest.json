@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/rarityconcept/static/css/main.a617e044.chunk.css",
+    "main.js": "/rarityconcept/static/js/main.70338eb1.chunk.js",
+    "main.js.map": "/rarityconcept/static/js/main.70338eb1.chunk.js.map",
+    "runtime-main.js": "/rarityconcept/static/js/runtime-main.ee76ab99.js",
+    "runtime-main.js.map": "/rarityconcept/static/js/runtime-main.ee76ab99.js.map",
+    "static/js/2.8e5e77dd.chunk.js": "/rarityconcept/static/js/2.8e5e77dd.chunk.js",
+    "static/js/2.8e5e77dd.chunk.js.map": "/rarityconcept/static/js/2.8e5e77dd.chunk.js.map",
+    "static/js/3.3177dc51.chunk.js": "/rarityconcept/static/js/3.3177dc51.chunk.js",
+    "static/js/3.3177dc51.chunk.js.map": "/rarityconcept/static/js/3.3177dc51.chunk.js.map",
+    "index.html": "/rarityconcept/index.html",
+    "static/css/main.a617e044.chunk.css.map": "/rarityconcept/static/css/main.a617e044.chunk.css.map",
+    "static/js/2.8e5e77dd.chunk.js.LICENSE.txt": "/rarityconcept/static/js/2.8e5e77dd.chunk.js.LICENSE.txt",
+    "static/media/logo.6ce24c58.svg": "/rarityconcept/static/media/logo.6ce24c58.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.ee76ab99.js",
+    "static/js/2.8e5e77dd.chunk.js",
+    "static/css/main.a617e044.chunk.css",
+    "static/js/main.70338eb1.chunk.js"
+  ]
+}
