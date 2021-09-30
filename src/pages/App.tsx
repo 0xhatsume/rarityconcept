@@ -4,6 +4,7 @@ import Header from '../components/Header';
 import {Toaster} from 'react-hot-toast';
 import Web3ReactManager from '../components/Web3ReactManager';
 
+//import { useSummonerIDsFromGraph } from '../services/graphs/hooks'
 //import Loader from '../components/Loader';
 
 
@@ -37,6 +38,13 @@ const HeaderWrapper = styled.div`
 `
 
 function App() {
+  // const { data, isLoading, error } = useSummonerIDsFromGraph("0xCb703E4246716242526ca15D807324f3fD645d61")
+  // //console.log(data["summoners"])
+  // console.log(data?.summoners
+  //               .map((v)=> parseInt(v?.id) )
+  //               .sort((a,b)=>a-b))
+
+  
   return (
     <>
       <Header />

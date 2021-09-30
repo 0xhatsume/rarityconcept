@@ -1,0 +1,1 @@
+export const summonerSubgraphEndpoint = 'https://api.thegraph.com/subgraphs/name/eabz/rarity';
