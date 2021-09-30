@@ -7,15 +7,11 @@ import { chunkArrayByNumber } from "../../utils/chunkArray";
 
 import { setLoading, updateSummoners } from './actions';
 
-export const SummonersUpdater = () : null => {
+export default function SummonersUpdater() : null {
     const { library, chainId, account } = useActiveWeb3React()
     const dispatch = useAppDispatch()
 
     const {data, isLoading, error} = useSummonerIDsFromGraph(account as string)
-
-    const ids: number[] = data?.summoners
-                    .map((v:{id:string})=> parseInt(v?.id) )
-                    .sort((a:number,b:number)=> a-b)
 
     const { summoners_data } = useRarityLib()
 
@@ -33,7 +29,6 @@ export const SummonersUpdater = () : null => {
                     const chunk_data = await summoners_data(chunk)
                     full_data = full_data.concat(chunk_data)
                 }
-
                 dispatch(updateSummoners(full_data))
                 return
             }
@@ -42,10 +37,24 @@ export const SummonersUpdater = () : null => {
     )
 
     useEffect(() => {
-        if(!ids || !library || !chainId || !account ) return
+        if(!data || !library || !chainId || !account ) return
+        if (error){ console.log(error); return }
+        //console.log("useSummonerEffect.")
+        if (isLoading) return
+        
+        // set loading
         dispatch(setLoading(true))
-        fetch_summoners_data(ids).then(()=>dispatch(setLoading(false)))
-    },[ids, fetch_summoners_data, library, chainId, account])
+        
+        // fetch then remove loading
+        fetch_summoners_data(
+            // parse returned ids from subgraph data to array of numbers
+            data?.summoners
+                .map((v:{id:string})=> parseInt(v?.id) )
+                .sort((a:number,b:number)=> a-b)
+
+            ).then(()=>dispatch(setLoading(false)))
+
+    },[data, isLoading, fetch_summoners_data, library, chainId, account])
 
     return null
 }

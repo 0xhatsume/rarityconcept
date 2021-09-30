@@ -17,6 +17,8 @@ export default createReducer(initialState, (builder) =>
     builder
         .addCase(updateSummoners, (state, action) => {
             state.data = action.payload
+            console.log("summoner data:")
+            console.log(state.data)
         })
         .addCase(setLoading, (state, action) => {
             state.loading = action.payload

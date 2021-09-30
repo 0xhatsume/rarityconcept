@@ -1,10 +1,10 @@
 import { configureStore } from '@reduxjs/toolkit';
 import { TypedUseSelectorHook, useDispatch, useSelector } from 'react-redux';
-
+import summoners from '../state/summoners/reducer';
 
 const store = configureStore({
     reducer: {
-
+        summoners
     }
 });
 
